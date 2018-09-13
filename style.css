@@ -120,7 +120,7 @@ a {
 }
 
 .google-apps {
-  background-image: url('images/icon-sprite.png');
+  background-image: url("images/icon-sprite.png");
   background-repeat: no-repeat;
   background-position: -132px -38px;
   background-size: 528px 68px;
@@ -161,30 +161,37 @@ a {
 .search__input-wrapper {
   display: flex;
   border: 0;
-  box-shadow:
-    0 2px 2px 0 rgba(0, 0, 0, 0.16),
-    0 0 0 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   padding: 0.7em 1em;
   margin-bottom: 1rem;
   min-width: 31rem;
+  border-radius: 0.125rem;
+  transition: box-shadow 0.1s ease-in;
+}
+
+.search__input-wrapper--hover,
+.search__input-wrapper--focus {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .search__input {
   border: 0;
+  margin-right: 1.1em;
   flex: 1 1 auto;
   outline: 0;
   font-size: 1rem;
-  padding-right: 1em;
+  cursor: text;
+  -webkit-appearance: none;
 }
 
 .search_mic {
   margin-left: auto;
+  cursor: pointer;
 }
 
 .search input[type="submit"] {
   margin: 1em 0.15em;
 }
-
 
 /*---------------------------------------------------
  # Footer

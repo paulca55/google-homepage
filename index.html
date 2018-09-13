@@ -27,8 +27,9 @@
 
     <form class="search">
       <div class="search__input-wrapper">
-        <input type="text" class="search__input">
-        <img src="images/microphone-icon.png" class="search_mic" width="23" height="23">
+        <input type="text" class="search__input" autofocus>
+        <img src="images/microphone-icon.png" class="search_mic" alt="Search by voice" width="23"
+          height="23">
       </div>
       <input type="submit" value="Google Search" class="btn btn--grey">
       <input type="submit" value="I'm Feeling Lucky" class="btn btn--grey">
@@ -52,6 +53,24 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var searchWrapper = document.querySelector('.search__input-wrapper');
+    var search = document.querySelector('.search__input');
+
+    function hoverClassToggle() {
+      searchWrapper.classList.toggle('search__input-wrapper--hover');
+    };
+
+    function focusClassToggle() {
+      searchWrapper.classList.toggle('search__input-wrapper--focus');
+    };
+
+    searchWrapper.addEventListener('mouseover', hoverClassToggle);
+    searchWrapper.addEventListener('mouseout', hoverClassToggle);
+    search.addEventListener('focus', focusClassToggle);
+    search.addEventListener('blur', focusClassToggle);
+  </script>
 </body>
 
 </html>
