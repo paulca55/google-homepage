@@ -22,6 +22,7 @@ body {
 a {
   text-decoration: none;
   outline: none;
+  color: inherit;
 }
 
 /* Utility Classes */
@@ -146,9 +147,16 @@ a {
   margin-top: 200px;
 }
 
+.main__logo {
+  margin-bottom: 2em;
+}
+
 /*---------------------------------------------------
  # Search Form
 ---------------------------------------------------*/
+.search {
+  text-align: center;
+}
 
 .search__input-wrapper {
   display: flex;
@@ -156,7 +164,9 @@ a {
   box-shadow:
     0 2px 2px 0 rgba(0, 0, 0, 0.16),
     0 0 0 1px rgba(0, 0, 0, 0.08);
-  padding: 1em;
+  padding: 0.7em 1em;
+  margin-bottom: 1rem;
+  min-width: 31rem;
 }
 
 .search__input {
@@ -164,6 +174,7 @@ a {
   flex: 1 1 auto;
   outline: 0;
   font-size: 1rem;
+  padding-right: 1em;
 }
 
 .search_mic {
