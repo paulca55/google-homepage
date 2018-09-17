@@ -56,16 +56,16 @@ a {
   background-image: linear-gradient(#4387fd, #4683ea);
   color: #fff;
   border-color: red;
-}
 
-.btn.btn--blue:focus {
-  background-color: #5997f8;
-  background-image: none;
-}
+  &:focus {
+    background-color: #5997f8;
+    background-image: none;
+  }
 
-.btn.btn--blue:active {
-  box-shadow: inset 0 0.18em 0 rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(#3c7ae4, #3f76d3);
+  &:active {
+    box-shadow: inset 0 0.18em 0 rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(#3c7ae4, #3f76d3);
+  }
 }
 
 .btn.btn--grey {
@@ -74,18 +74,18 @@ a {
   color: #757575;
   border-color: #f2f2f2;
   padding: 0 1.2em;
-}
 
-.btn.btn--grey:hover {
-  background-color: #f8f8f8;
-  background-image: linear-gradient(#f8f8f8, #f1f1f1);
-  border-color: #c6c6c6;
-  color: #222;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
+  &:hover {
+    background-color: #f8f8f8;
+    background-image: linear-gradient(#f8f8f8, #f1f1f1);
+    border-color: #c6c6c6;
+    color: #222;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
 
-.btn.btn--grey:focus {
-  border-color: #4d90fe;
+  &:focus {
+    border-color: #4d90fe;
+  }
 }
 
 /*---------------------------------------------------
@@ -110,10 +110,13 @@ a {
 .header__nav a {
   text-decoration: none;
   display: block;
-}
 
-.header__nav a:hover, .header__nav a:visited, .header__nav a:active, .header__nav a:focus {
-  text-decoration: underline;
+  &:hover,
+  &:visited,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 .google-apps {
@@ -124,14 +127,14 @@ a {
   width: 30px;
   height: 30px;
   opacity: 0.55;
-  -webkit-transform: translateY(0.8em);
-          transform: translateY(0.8em);
+  transform: translateY(0.8em);
   padding: 0 1em;
   vertical-align: bottom;
-}
 
-.google-apps:hover, .google-apps:focus {
-  opacity: 1;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
 /*---------------------------------------------------
@@ -220,15 +223,18 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
-}
 
-.footer__links a {
-  line-height: 2.9;
-  color: #666;
-}
+  & a {
+    line-height: 2.9;
+    color: #666;
 
-.footer__links a:hover, .footer__links a:visited, .footer__links a:active, .footer__links a:focus {
-  text-decoration: underline;
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 
 .footer__links-1,
@@ -243,5 +249,3 @@ a {
 .footer__links-2 a {
   margin-right: 1.8em;
 }
-
-/*# sourceMappingURL=../style.css.map */
