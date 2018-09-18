@@ -144,7 +144,8 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20vh;
+  margin-top: 16vh;
+  margin-bottom: 10em;
 }
 
 .main__logo {
@@ -158,7 +159,7 @@ a {
 .search {
   text-align: center;
   width: 90%;
-  max-width: 428px;
+  max-width: 26.75em;
 }
 
 .search__input-wrapper {
@@ -204,11 +205,14 @@ a {
  # Footer
 ---------------------------------------------------*/
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: #f2f2f2;
   width: 100%;
-  padding: 0 1.5rem;
+
+  @media screen and (min-width: 30em) {
+    padding: 0 1.5rem;
+  }
 }
 
 .footer__location,
@@ -231,6 +235,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  text-align: center;
 
   @media screen and (min-width: 30em) {
     display: flex;
@@ -238,8 +243,11 @@ a {
   }
 
   & a {
+    display: inline-block;
     line-height: 2.9;
     color: #666;
+    padding: 0 1.5em;
+    text-align: center;
 
     &:hover,
     &:visited,
@@ -250,17 +258,12 @@ a {
   }
 }
 
-.footer__links-1,
-.footer__links-2 {
-  display: flex;
-  text-align: center;
-}
-
 .footer__links-1 a {
   flex: 1;
 
   @media screen and (min-width: 30em) {
     margin-left: 1.8em;
+    padding: 0;
   }
 }
 
@@ -269,5 +272,6 @@ a {
 
   @media screen and (min-width: 30em) {
     margin-right: 1.8em;
+    padding: 0;
   }
 }

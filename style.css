@@ -141,7 +141,8 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20vh;
+  margin-top: 16vh;
+  margin-bottom: 10em;
 }
 
 .main__logo {
@@ -155,7 +156,7 @@ a {
 .search {
   text-align: center;
   width: 90%;
-  max-width: 428px;
+  max-width: 26.75em;
 }
 
 .search__input-wrapper {
@@ -201,11 +202,16 @@ a {
  # Footer
 ---------------------------------------------------*/
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: #f2f2f2;
   width: 100%;
-  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 30em) {
+  .footer {
+    padding: 0 1.5rem;
+  }
 }
 
 .footer__location,
@@ -230,6 +236,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  text-align: center;
 }
 
 @media screen and (min-width: 30em) {
@@ -240,18 +247,15 @@ a {
 }
 
 .footer__links a {
+  display: inline-block;
   line-height: 2.9;
   color: #666;
+  padding: 0 1.5em;
+  text-align: center;
 }
 
 .footer__links a:hover, .footer__links a:visited, .footer__links a:active, .footer__links a:focus {
   text-decoration: underline;
-}
-
-.footer__links-1,
-.footer__links-2 {
-  display: flex;
-  text-align: center;
 }
 
 .footer__links-1 a {
@@ -261,6 +265,7 @@ a {
 @media screen and (min-width: 30em) {
   .footer__links-1 a {
     margin-left: 1.8em;
+    padding: 0;
   }
 }
 
@@ -271,6 +276,7 @@ a {
 @media screen and (min-width: 30em) {
   .footer__links-2 a {
     margin-right: 1.8em;
+    padding: 0;
   }
 }
 
