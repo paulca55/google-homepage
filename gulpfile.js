@@ -13,7 +13,7 @@ gulp.task('styles', function() {
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(postcss([autoprefixer()]))
-        .pipe(sourcemaps.write('../'))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
         .pipe(browserSync.stream());
 });
