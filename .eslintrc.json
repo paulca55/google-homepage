@@ -8,7 +8,7 @@
   },
   "rules": {
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "semi": ["error", "always"]
   }
 }
