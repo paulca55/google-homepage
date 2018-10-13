@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-http://hopeful-ride-d4ac35.netlify.com/* http://googlehomepage.cassify.co.uk/:splat 301!
