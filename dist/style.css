@@ -2,7 +2,7 @@
  # Global
 ---------------------------------------------------*/
 html {
-  box-sizing: border-box;
+  box-sizing: border-box2;
 }
 
 *,
@@ -280,4 +280,4 @@ a {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=../src/scss/style.css.map */

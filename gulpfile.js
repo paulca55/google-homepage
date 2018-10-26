@@ -9,12 +9,12 @@ var gulp = require('gulp'),
 // Theme stylesheet (development)
 gulp.task('styles', function() {
   return gulp
-    .src('./scss/style.scss')
+    .src('./src/scss/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./'))
+    .pipe(sourcemaps.write('../src/scss/'))
+    .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream());
 });
 
@@ -29,7 +29,7 @@ gulp.task('browser-sync', function() {
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch('scss/style.scss', ['styles']);
+  gulp.watch('src/scss/style.scss', ['styles']);
 });
 
 // Default gulp task
