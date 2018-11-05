@@ -27,9 +27,15 @@ gulp.task('browser-sync', function() {
   });
 });
 
+// Browser Reload
+gulp.task('browserReload', function() {
+  browserSync.reload();
+});
+
 // Watch
 gulp.task('watch', function() {
   gulp.watch('src/scss/style.scss', ['styles']);
+  gulp.watch('dist/index.html', ['html']);
 });
 
 // Default gulp task
