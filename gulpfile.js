@@ -28,14 +28,14 @@ gulp.task('browser-sync', function() {
 });
 
 // Browser Reload
-gulp.task('browserReload', function() {
+gulp.task('browser-reload', function() {
   browserSync.reload();
 });
 
 // Watch
 gulp.task('watch', function() {
   gulp.watch('src/scss/style.scss', ['styles']);
-  gulp.watch('dist/index.html', ['html']);
+  gulp.watch('dist/index.html', ['browser-reload']);
 });
 
 // Default gulp task
