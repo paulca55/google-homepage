@@ -112,12 +112,15 @@ a {
   text-decoration: none;
 }
 
-.header__nav a:hover, .header__nav a:visited, .header__nav a:active, .header__nav a:focus {
+.header__nav a:hover,
+.header__nav a:visited,
+.header__nav a:active,
+.header__nav a:focus {
   text-decoration: underline;
 }
 
 .google-apps {
-  background-image: url("images/icon-sprite.png");
+  background-image: url("../images/icon-sprite.png");
   background-position: -132px -38px;
   background-repeat: no-repeat;
   background-size: 528px 68px;
@@ -125,12 +128,13 @@ a {
   opacity: 0.55;
   padding: 0 1em;
   -webkit-transform: translateY(0.8em);
-          transform: translateY(0.8em);
+  transform: translateY(0.8em);
   vertical-align: bottom;
   width: 30px;
 }
 
-.google-apps:hover, .google-apps:focus {
+.google-apps:hover,
+.google-apps:focus {
   opacity: 1;
 }
 
@@ -254,7 +258,10 @@ a {
   text-align: center;
 }
 
-.footer__links a:hover, .footer__links a:visited, .footer__links a:active, .footer__links a:focus {
+.footer__links a:hover,
+.footer__links a:visited,
+.footer__links a:active,
+.footer__links a:focus {
   text-decoration: underline;
 }
 
@@ -279,5 +286,3 @@ a {
     padding: 0;
   }
 }
-
-/*# sourceMappingURL=../src/scss/style.css.map */
