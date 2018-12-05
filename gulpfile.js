@@ -29,7 +29,7 @@ var autoprefixer = require('autoprefixer'),
 // Show all available tasks
 gulp.task('tasks', taskListing.withFilters(/:/));
 
-// Main Style Sheet (development)
+// Main stylesheet (development)
 gulp.task('styles-main', function() {
   return gulp
     .src(scssSource + 'style.scss')
@@ -41,7 +41,7 @@ gulp.task('styles-main', function() {
     .pipe(browserSync.stream());
 });
 
-// Other Style Sheets (development)
+// Other stylesheets (development)
 gulp.task('styles-other', function() {
   return gulp
     .src(cssSource + '**/*.css')
@@ -71,7 +71,7 @@ gulp.task('html', function() {
     .pipe(gulp.dest(htmlDist));
 });
 
-// Image Optimisation
+// Image optimisation
 gulp.task('images', function() {
   return gulp
     .src(imgSource + '**/*')
@@ -123,7 +123,7 @@ gulp.task('default', ['styles', 'scripts', 'images', 'html', 'browser-sync', 'wa
 // Build tasks (cleaning, uglifying, minifiying, image optimisation, etc)
 // -----------------------------------------------------------------------
 
-// Main Style Sheet (production)
+// Main stylesheet (production)
 gulp.task('styles-main-prod', function() {
   return gulp
     .src(scssSource + 'style.scss')
@@ -138,7 +138,7 @@ gulp.task('styles-main-prod', function() {
     .pipe(gulp.dest(cssDist));
 });
 
-// Other Style Sheets (production)
+// Other stylesheets (production)
 gulp.task('styles-other-prod', function() {
   return gulp
     .src(cssSource + '**/*.css')

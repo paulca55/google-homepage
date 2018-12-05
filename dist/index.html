@@ -1,75 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google</title>
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Google</title>
-  <link rel="stylesheet" href="css/vendor/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#0">Gmail</a></li>
+          <li><a href="#0">Images</a></li>
+          <li><a href="#0" class="google-apps no-underline" title="Google Apps"></a></li>
+          <li><a href="#0" class="btn btn--blue no-underline">Sign in</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header class="header">
-    <nav class="header__nav">
-      <ul>
-        <li><a href="#0">Gmail</a></li>
-        <li><a href="#0">Images</a></li>
-        <li><a href="#0" class="google-apps no-underline" title="Google Apps"></a></li>
-        <li><a href="#0" class="btn btn--blue no-underline">Sign in</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main class="main">
+      <img src="images/google-logo.png" class="main__logo" alt="Joanna Baillie’s 256th Birthday">
 
-  <main class="main">
-    <img src="images/google-logo.png" class="main__logo" alt="Joanna Baillie’s 256th Birthday">
+      <form class="search">
+        <div class="search__input-wrapper">
+          <input type="text" class="search__input" autofocus>
+          <img src="images/microphone-icon.png" class="search_mic" alt="Search by voice" width="23" height="23">
+        </div>
+        <input type="submit" value="Google Search" class="btn btn--grey">
+        <input type="submit" value="I'm Feeling Lucky" class="btn btn--grey">
+      </form>
+    </main>
 
-    <form class="search">
-      <div class="search__input-wrapper">
-        <input type="text" class="search__input" autofocus>
-        <img src="images/microphone-icon.png" class="search_mic" alt="Search by voice" width="23" height="23">
+    <footer class="footer">
+      <div class="footer__location"><span>United Kingdom</span></div>
+      <div class="footer__links">
+        <div class="footer__links-1">
+          <a href="#0">Privacy</a> <a href="#0">Terms</a> <a href="#0">Settings</a>
+        </div>
+        <div class="footer__links-2">
+          <a href="#0">Advertising</a> <a href="#0">Business</a> <a href="#0">About</a>
+        </div>
       </div>
-      <input type="submit" value="Google Search" class="btn btn--grey">
-      <input type="submit" value="I'm Feeling Lucky" class="btn btn--grey">
-    </form>
-  </main>
+    </footer>
 
-  <footer class="footer">
-    <div class="footer__location">
-      <span>United Kingdom</span>
-    </div>
-    <div class="footer__links">
-      <div class="footer__links-1">
-        <a href="#0">Privacy</a>
-        <a href="#0">Terms</a>
-        <a href="#0">Settings</a>
-      </div>
-      <div class="footer__links-2">
-        <a href="#0">Advertising</a>
-        <a href="#0">Business</a>
-        <a href="#0">About</a>
-      </div>
-    </div>
-  </footer>
+    <script>
+      var searchWrapper = document.querySelector(".search__input-wrapper");
+      var search = document.querySelector(".search__input");
 
-  <script>
-    var searchWrapper = document.querySelector('.search__input-wrapper');
-    var search = document.querySelector('.search__input');
+      function hoverClassToggle() {
+        searchWrapper.classList.toggle("search__input-wrapper--hover");
+      }
 
-    function hoverClassToggle() {
-      searchWrapper.classList.toggle('search__input-wrapper--hover');
-    };
+      function focusClassToggle() {
+        searchWrapper.classList.toggle("search__input-wrapper--focus");
+      }
 
-    function focusClassToggle() {
-      searchWrapper.classList.toggle('search__input-wrapper--focus');
-    };
-
-    searchWrapper.addEventListener('mouseover', hoverClassToggle);
-    searchWrapper.addEventListener('mouseout', hoverClassToggle);
-    search.addEventListener('focus', focusClassToggle);
-    search.addEventListener('blur', focusClassToggle);
-  </script>
-</body>
-
+      searchWrapper.addEventListener("mouseover", hoverClassToggle);
+      searchWrapper.addEventListener("mouseout", hoverClassToggle);
+      search.addEventListener("focus", focusClassToggle);
+      search.addEventListener("blur", focusClassToggle);
+    </script>
+  </body>
 </html>
