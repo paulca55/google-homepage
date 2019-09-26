@@ -1,5 +1,4 @@
 {
-  "plugins": ["stylelint-order"],
   "extends": "stylelint-config-recommended",
   "rules": {
     "at-rule-no-unknown": [
@@ -7,8 +6,6 @@
       {
         "ignoreAtRules": ["extend", "include", "mixin"]
       }
-    ],
-    "order/order": ["custom-properties", "declarations"],
-    "order/properties-alphabetical-order": true
+    ]
   }
 }
