@@ -32,7 +32,7 @@ gulp.task('tasks', taskListing.withFilters(/:/));
 // Main stylesheet (development)
 gulp.task('styles-main', function() {
   return gulp
-    .src(scssSource + 'style.scss')
+    .src(scssSource + '**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
@@ -106,7 +106,7 @@ gulp.task('clean', function() {
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch(scssSource + 'style.scss', ['styles-main']);
+  gulp.watch(scssSource + '**/*.scss', ['styles-main']);
   gulp.watch(cssSource + '**/*.css', ['styles-other']);
   gulp.watch(jsSource + '**/*.js', ['scripts']);
   gulp.watch(imgSource + '**/*', ['images']);
@@ -126,7 +126,7 @@ gulp.task('default', ['styles', 'scripts', 'images', 'html', 'browser-sync', 'wa
 // Main stylesheet (production)
 gulp.task('styles-main-prod', function() {
   return gulp
-    .src(scssSource + 'style.scss')
+    .src(scssSource + '**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(
       sass({
