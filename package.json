@@ -12,7 +12,7 @@
     "html": "html-minifier --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
     "images": "imagemin-dir src/images dist/images",
     "server": "browser-sync start --server dist --files 'dist/css/**/*.css, dist/js/**/*.js'",
-    "build:css": "run-s scss && run-s autoprefixer",
+    "build:css": "run-s scss autoprefixer",
     "build": "run-s clean build:css uglify images html",
     "watch:css": "onchange 'src/scss/*.scss' -- run-s build:css",
     "watch:js": "onchange 'src/js/*.js' -- run-s uglify",
