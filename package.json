@@ -22,7 +22,6 @@
   "devDependencies": {
     "autoprefixer": "^7.2.6",
     "browser-sync": "^2.11.1",
-    "del": "^2.2.0",
     "eslint": "^4.10.0",
     "html-minifier": "^4.0.0",
     "imagemin-cli": "^5.0.0",
