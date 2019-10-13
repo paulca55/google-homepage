@@ -8,7 +8,7 @@
     "clean": "rimraf dist/{css/*,js/*,images/*,*.html}",
     "scss": "node-sass --output-style compressed --source-map true -o dist/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/**/*.css",
-    "uglify": "mkdirp dist/js && uglifyjs src/js/**/*.js -m -c -o dist/js/scripts.js",
+    "uglify": "mkdirp dist/js && uglifyjs src/js/**/*.js -c -o dist/js/scripts.js",
     "html": "html-minifier --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
     "images": "imagemin-dir src/images dist/images",
     "server": "browser-sync start --server dist --files 'dist/css/**/*.css, dist/js/**/*.js'",
