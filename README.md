@@ -1,6 +1,6 @@
 # Google Homepage
 
-Build the google.com homepage. From The Odin Project's [curriculum](http://www.theodinproject.com/courses/web-development-101/lessons/html-css)
+From The Odin Project's [curriculum](http://www.theodinproject.com/courses/web-development-101/lessons/html-css), I was set the task of building the google.com homepage (without search functionality).
 
 In this project I used npm, gulp, Sass (SCSS syntax), flexbox and responsive web design techniques.
 
