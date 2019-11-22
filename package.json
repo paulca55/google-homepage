@@ -8,21 +8,23 @@
     "clean": "rimraf dist/{css/*,js/*,images/*,*.html}",
     "scss": "node-sass --output-style compressed --source-map true -o dist/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/**/*.css",
-    "uglify": "mkdirp dist/js && uglifyjs src/js/*.js -c -o dist/js/scripts.js",
-    "html": "html-minifier --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
+    "uglify": "mkdirp dist/js && terser src/js/scripts.js -o dist/js/scripts.js -c -m",
+    "html": "del-cli dist/*html && html-minifier --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
     "images": "imagemin-dir src/images dist/images",
-    "server": "browser-sync start --server dist --files 'dist/css/**/*.css, dist/js/**/*.js'",
+    "server": "browser-sync start --server dist --files 'dist/css/**/*.css, !dist/css/**/*.map, dist/js/**/*.js', dist/index.html",
     "build:css": "run-s scss autoprefixer",
     "build": "run-s clean build:css uglify images html",
     "watch:css": "onchange 'src/scss/**/*.scss' -- run-s build:css",
     "watch:js": "onchange 'src/js/**/*.js' -- run-s uglify",
     "watch:images": "onchange 'src/images' -- run-s images",
+    "watch:html": "onchange 'src/*.html' -- run-s html",
     "watch": "run-p server watch:*"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.6",
+    "autoprefixer": "^9.7.2",
     "browser-sync": "^2.11.1",
-    "eslint": "^4.10.0",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.6.0",
     "html-minifier": "^4.0.0",
     "imagemin-cli": "^5.0.0",
     "imagemin-cli-preserve-dir-structure": "0.0.2",
@@ -33,8 +35,8 @@
     "postcss-cli": "^6.1.3",
     "rimraf": "^3.0.0",
     "shelljs": "^0.8.3",
-    "stylelint": "^9.6.0",
-    "stylelint-config-recommended": "^1.0.0",
-    "uglify-js": "^3.6.1"
+    "stylelint": "^12.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "terser": "^4.4.0"
   }
 }
