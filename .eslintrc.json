@@ -1,14 +1,3 @@
 {
-  "env": {
-    "browser": true
-  },
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaVersion": 2015
-  },
-  "rules": {
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
-    "semi": ["error", "always"]
-  }
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"]
 }
