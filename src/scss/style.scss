@@ -1,8 +1,7 @@
 /*---------------------------------------------------
 # Normalize
 ---------------------------------------------------*/
-
-@import "vendor/normalize";
+@import 'vendor/normalize';
 
 /*---------------------------------------------------
  # Global
@@ -128,7 +127,7 @@ a {
 }
 
 .google-apps {
-  background-image: url("../images/icon-sprite.png");
+  background-image: url('../images/icon-sprite.png');
   background-position: -132px -38px;
   background-repeat: no-repeat;
   background-size: 528px 68px;
@@ -206,7 +205,7 @@ a {
   width: 2em;
 }
 
-.search input[type="submit"] {
+.search input[type='submit'] {
   margin: 1em 0.15em;
 }
 
