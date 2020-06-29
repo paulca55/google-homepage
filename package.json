@@ -5,10 +5,10 @@
     ">0.25%"
   ],
   "scripts": {
-    "server": "browser-sync start --server dist --files 'dist/css/**/*.css, dist/js/**/*.js', dist/*.html",
-    "watch": "parcel watch src/*.html",
+    "server": "browser-sync start --server ./dist --files './dist/css/**/*.css, ./dist/js/**/*.js', ./dist/*.html",
+    "watch": "parcel watch ./src/*.html",
     "start": "run-p watch server",
-    "build": "parcel build src/*.html"
+    "build": "parcel build ./src/*.html"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
