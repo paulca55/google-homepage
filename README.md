@@ -4,6 +4,4 @@
 
 As part of a course I was set the task of building the Google homepage (without search functionality).
 
-In this project I used npm, gulp, Sass (SCSS), flexbox and responsive web design techniques.
-
 View the project here: [https://google.netlify.paulcass.dev](https://google.netlify.paulcass.dev)

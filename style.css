@@ -1,9 +1,4 @@
 /*---------------------------------------------------
-# Normalize
----------------------------------------------------*/
-@import 'vendor/normalize';
-
-/*---------------------------------------------------
  # Global
 ---------------------------------------------------*/
 html {
@@ -127,7 +122,7 @@ a {
 }
 
 .google-apps {
-  background-image: url('../images/icon-sprite.png');
+  background-image: url('images/icon-sprite.png');
   background-position: -132px -38px;
   background-repeat: no-repeat;
   background-size: 528px 68px;

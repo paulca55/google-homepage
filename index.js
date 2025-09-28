@@ -1,7 +1,5 @@
-import '../scss/style.scss';
-
-var searchWrapper = document.querySelector('.search__input-wrapper');
-var search = document.querySelector('.search__input');
+const searchWrapper = document.querySelector('.search__input-wrapper');
+const search = document.querySelector('.search__input');
 
 function hoverClassToggle() {
   searchWrapper.classList.toggle('search__input-wrapper--hover');
