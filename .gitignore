@@ -2,6 +2,6 @@
 Thumbs.db
 node_modules/
 *.map
-.cache
+.parcel-cache
 dist/
 .idea/

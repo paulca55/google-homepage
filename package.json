@@ -1,30 +1,29 @@
 {
   "name": "google-home-page",
   "version": "1.0.0",
-  "browserslist": [
-    ">0.25%"
-  ],
+  "browserslist": ["> 0.25%, not dead"],
   "scripts": {
     "clean": "rimraf dist/*",
-    "server": "browser-sync start --server ./dist --files './dist/css/**/*.css, ./dist/js/**/*.js', ./dist/*.html",
-    "watch": "parcel watch ./src/*.html",
-    "start": "run-p watch server",
-    "build:parcel": "parcel build ./src/*.html",
-    "build": "run-s clean build:parcel"
+    "build:parcel": "parcel build src/*.html",
+    "build": "run-s clean build:parcel",
+    "start": "parcel src/*.html"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "@parcel/transformer-sass": "^2.15.4",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4",
+    "parcel": "^2.15.3",
     "prettier": "^2.0.5",
-    "rimraf": "^3.0.0",
-    "sass": "^1.28.0",
+    "rimraf": "^6.0.1",
+    "sass": "^1.26.9",
     "stylelint": "^13.5.0",
     "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-prettier": "^1.1.2"
+  },
+  "engines": {
+    "node": ">=22.19.0"
   }
 }
